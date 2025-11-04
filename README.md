@@ -1,10 +1,8 @@
-# README
-
-Plants Vs Zombies
+# Plants Vs Zombies
 
 ## Folder Structure:
 ```
-snake/
+plantsvszombies/
 ├── Makefile
 ├── src/
 │   └── main.cpp
