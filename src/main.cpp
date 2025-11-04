@@ -10,14 +10,22 @@ int main() {
     SetWindowMinSize(400, 300);
     SetTargetFPS(GAME_FPS);
 
+    // Load Assets
+    Texture2D cabbage = LoadTexture("assets/plants/cabbage-pult.png");
+
     game_is_running = true;
     // Main game loop
     while (!WindowShouldClose() && game_is_running) {
         BeginDrawing();
         ClearBackground(BLACK);
 
-        status_msg = "testing ok";
+        status_msg = "Cabbage id:" + std::to_string(cabbage.id);
         DrawText(status_msg.c_str(), 30, 30, 30, RED);
+
+        DrawTexture(cabbage, 20, 20, WHITE);
+
+        // TODO: Button Click
+        // TODO: Plant Animation
 
         // --- INPUT LOGIC ---
         // if (IsKeyPressed(KEY_RIGHT))
