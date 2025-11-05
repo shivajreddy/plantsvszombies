@@ -22,7 +22,9 @@ SRC_DIR := src
 LIB_DIR := lib
 
 # Source files (automatically find all .cpp files)
-SOURCES := $(wildcard $(SRC_DIR)/*.cpp)
+# SOURCES := $(wildcard $(SRC_DIR)/*.cpp)
+SOURCES := $(shell find $(SRC_DIR) -type f -name "*.cpp")
+
 
 # OS-specific settings
 # Windows
